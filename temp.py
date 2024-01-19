@@ -1,0 +1,4 @@
+from tests.SQL.sql_test import create_n_graded_assignments_for_teacher
+from tests.SQL.sql_test import test_get_grade_A_assignments_for_teacher_with_max_grading
+
+test_get_grade_A_assignments_for_teacher_with_max_grading()

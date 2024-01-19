@@ -6,4 +6,4 @@ GROUP BY teacher_id, grade)
 
 SELECT c
 FROM cte
-WHERE grade = "A" AND teacher_id IN (SELECT teacher_id FROM CTE WHERE c = (SELECT MAX(c) FROM CTE))
+WHERE grade = "A" AND teacher_id IN (SELECT teacher_id FROM CTE WHERE c = (SELECT MIN(c) FROM CTE))
