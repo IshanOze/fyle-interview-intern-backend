@@ -62,8 +62,8 @@ def test_submit_assignment_student_1(client, h_student_1):
         '/student/assignments/submit',
         headers=h_student_1,
         json={
-            'id': 274,
-            'teacher_id': 2
+            'id': 56,
+            'teacher_id': 1
         })
 
     assert response.status_code == 200
@@ -71,7 +71,7 @@ def test_submit_assignment_student_1(client, h_student_1):
     data = response.json['data']
     assert data['student_id'] == 1
     assert data['state'] == 'SUBMITTED'
-    assert data['teacher_id'] == 2
+    assert data['teacher_id'] == 1
 
 
 def test_assignment_resubmit_error(client, h_student_1):

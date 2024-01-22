@@ -113,3 +113,4 @@ class TestAssignmentModel(unittest.TestCase):
 
         self.assertIn('Assignment', repr_result)
         self.assertIn(str(assignment.id), repr_result)
+
