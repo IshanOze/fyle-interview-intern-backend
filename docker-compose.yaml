@@ -1,10 +1,8 @@
-version: 3
+version: '3'
 services:
   web:
     build: .
     ports:
-      - "7755:7755"  
-    depends_on:
-      - db
+      - "7755:7755"
     volumes:
-      - core/store.sqlite3:/app/store.sqlite3
+      - .:/app
