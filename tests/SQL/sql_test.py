@@ -54,7 +54,7 @@ def test_get_assignments_in_various_states():
     """Test to get assignments in various states"""
 
     # Define the expected result before any changes
-    expected_result = [('DRAFT', 132), ('GRADED', 1329), ('SUBMITTED', 11)]
+    expected_result = [('DRAFT', 192), ('GRADED', 2234), ('SUBMITTED', 22)]
 
     # Execute the SQL query and compare the result with the expected result
     with open('tests/SQL/number_of_assignments_per_state.sql', encoding='utf8') as fo:
@@ -71,7 +71,7 @@ def test_get_assignments_in_various_states():
         assert result[1] == sql_result[itr][1]
 
     # Modify an assignment state and grade, then re-run the query and check the updated result
-    expected_result = [('DRAFT', 132), ('GRADED', 1330), ('SUBMITTED', 10)]
+    expected_result = [('DRAFT', 192), ('GRADED', 2235), ('SUBMITTED', 21)]
 
     # Find an assignment in the 'SUBMITTED' state, change its state to 'GRADED' and grade to 'C'
     submitted_assignment: Assignment = Assignment.filter(Assignment.state == AssignmentStateEnum.SUBMITTED).first()
@@ -119,7 +119,7 @@ def test_get_grade_A_assignments_for_teacher_with_max_grading():
     sql_result = db.session.execute(text(sql)).fetchall()
 
     # write the results in a file for debugging
-    with open("sql-result-2.txt", "w") as fo:
+    with open("sql-result-3.txt", "w") as fo:
         fo.write(str(sql_result))
 
     assert grade_a_count_2 == sql_result[0][0]
