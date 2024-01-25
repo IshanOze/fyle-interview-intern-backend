@@ -1,0 +1,7 @@
+- Open a terminal
+
+- Run the following command
+    docker build -t flask-app
+
+- Run this command after the image is built
+    docker-compose up

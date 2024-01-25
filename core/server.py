@@ -13,6 +13,7 @@ app.register_blueprint(student_assignments_resources, url_prefix='/student')
 app.register_blueprint(teacher_assignments_resources, url_prefix='/teacher')
 app.register_blueprint(principal_assignments_resources, url_prefix='/principal')
 
+# register the principal-teachers resource
 app.register_blueprint(principal_teachers_resources, url_prefix='/principal')
 
 

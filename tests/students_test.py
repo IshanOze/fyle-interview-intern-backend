@@ -62,6 +62,7 @@ def test_submit_assignment_student_1(client, h_student_1):
         '/student/assignments/submit',
         headers=h_student_1,
         json={
+            # change this id to the one which has draft state
             'id': 112,
             'teacher_id': 1
         })

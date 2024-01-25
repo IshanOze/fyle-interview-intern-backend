@@ -14,7 +14,7 @@ RUN /bin/bash -c "source env/bin/activate"
 # Install any needed packages specified in requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Make port 7755 available to the world outside this container
+# Make Port 7755 available
 EXPOSE 7755
 
 # Define environment variable
